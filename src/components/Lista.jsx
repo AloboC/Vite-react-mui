@@ -18,12 +18,17 @@ import ReceiptIcon from '@material-ui/icons/Receipt'
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
-    maxWidth: 360
-    // backgroundColor: '#eee'
-    // backgroundColor: theme.palette.background.paper
+    maxWidth: 360,
+    boxSizing: 'border-box'
   },
-  nested: {
-    paddingLeft: theme.spacing(4)
+  itemLvl1: {
+    color: '#fff!important',
+    fontSize: '1.6rem'
+  },
+  itemLvl2: {
+    color: '#fff!important',
+    fontSize: '1.3rem',
+    marginLeft: '1rem'
   }
 }))
 
@@ -56,13 +61,13 @@ const Lista = () => {
       // }
       className={classes.root}
     >
-      <ItemMenu id="0000000000" text="Inicio" icon={<HomeIcon />} path="/" />
+      <ItemMenu id="0000000000" text="Inicio" icon={<HomeIcon className={classes.itemLvl1} />} path="/" />
 
       {/* ############################################ PANEL DE CONTROL ############################################ */}
       <ItemMenu
         id="1000000000"
         text="Panel de Control"
-        icon={<SettingsIcon />}
+        icon={<SettingsIcon className={classes.itemLvl1} />}
         changeState={setPanelControl}
         estate={statePanelControl}
       />
@@ -71,7 +76,7 @@ const Lista = () => {
           <ItemMenu
             id="10010000000"
             text="Mantenimiento"
-            icon={<BuildRoundedIcon />}
+            icon={<BuildRoundedIcon className={classes.itemLvl2} />}
             changeState={setPanelMantenimiento}
             estate={statePanelMantenimiento}
           />
@@ -87,8 +92,8 @@ const Lista = () => {
           </Collapse>
 
           {/* <ItemMenu icon={<StarBorder />} text="Starred" path="/" /> */}
+          <Divider color="#fff" />
         </List>
-        <Divider />
       </Collapse>
 
       {/* ############################################ FACTURACION ############################################ */}
@@ -96,7 +101,7 @@ const Lista = () => {
       <ItemMenu
         id="2000000000"
         text="Facturación"
-        icon={<ReceiptIcon />}
+        icon={<ReceiptIcon className={classes.itemLvl1} />}
         changeState={setFacturacion}
         estate={stateFacturacion}
       />
@@ -105,7 +110,7 @@ const Lista = () => {
           <ItemMenu
             id="2001000000"
             text="Mantenimiento"
-            icon=""
+            icon={<BuildRoundedIcon className={classes.itemLvl2} />}
             changeState={setFMantenimiento}
             estate={stateFMantenimiento}
           />
@@ -118,8 +123,8 @@ const Lista = () => {
               <ItemMenu icon="" id="2001050000" text="Ruteros" path="/" />
               <ItemMenu icon="" id="1001060000" text="Vendedores" path="/" />
               <ItemMenu icon="" id="1001070000" text="Zonas Cliente" path="/" />
+              <Divider />
             </List>
-            <Divider />
           </Collapse>
         </List>
         <Divider />

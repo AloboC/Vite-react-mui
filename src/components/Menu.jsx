@@ -15,8 +15,8 @@ const useStyles = makeStyles((theme) => ({
   drawerPaper: {
     // cubre todo el alto de la pantalla
     width: drawerW,
-    // backgroundColor: '#eee'
-    backgroundColor: 'red'
+    backgroundColor: '#282c34',
+    color: '#fff'
   },
 
   offset: theme.mixins.toolbar

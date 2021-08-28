@@ -9,6 +9,23 @@ const useStyles = makeStyles((theme) => ({
   nested: {
     paddingLeft: theme.spacing(2)
   }
+
+  // root: {
+  //   // fontFamily: 'Aria....',
+  //   paddingLeft: theme.spacing(2),
+
+  //   fontSize: '2rem',
+  //   '&:selected': {
+  //     // backgroundColor: '#B2D0EB!important'
+  //     backgroundColor: '#eee!important'
+  //   },
+  //   '&:hover': {
+  //     // backgroundColor: '#B2D0EB!important',
+  //     borderBotton: '1px solid #fff',
+  //     color: '#fff'
+  //     // color: '#707070!important'
+  //   }
+  // }
 }))
 
 // ! ........................... PRINCIPAL .................................
