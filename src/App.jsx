@@ -7,7 +7,6 @@ import AppRouter from './routers/AppRouter'
 
 // ?...................... Modificador tema ............................
 import { ThemeProvider } from '@material-ui/core/styles'
-
 import theme from './Config/ThemeConfig'
 
 import './App.css'
