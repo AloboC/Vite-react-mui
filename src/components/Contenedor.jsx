@@ -15,7 +15,10 @@ const estilos = makeStyles((theme) => ({
     minHeight: '100vh',
     overflowY: 'auto',
     overflowX: 'hidden',
-    padding: theme.spacing(3)
+    padding: theme.spacing(3),
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
   }
 }))
 
@@ -47,11 +50,7 @@ const Contenedor = ({ component }) => {
         <Menu variant="temporary" open={abrir} onClose={() => cerrarNavBar()} />
       </Hidden>
 
-      <div
-        className={classes.content}
-        justifyContent="center"
-        alignItems="center"
-      >
+      <div className={classes.content}>
         <div className={classes.offset}></div>
         {component}
       </div>
