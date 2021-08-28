@@ -15,10 +15,7 @@ const estilos = makeStyles((theme) => ({
     minHeight: '100vh',
     overflowY: 'auto',
     overflowX: 'hidden',
-    padding: theme.spacing(3),
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center'
+    padding: theme.spacing(3)
   }
 }))
 

@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import AccountCircleRoundedIcon from '@material-ui/icons/AccountCircleRounded'
 
 // *................................... Constantes ..................................
-const drawerW = 240
+const drawerW = 260
 
 // *.................................... Estilos ....................................
 const useStyles = makeStyles((theme) => ({

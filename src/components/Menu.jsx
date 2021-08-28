@@ -3,7 +3,7 @@ import { makeStyles, Drawer, Divider } from '@material-ui/core'
 import Lista from './Lista'
 
 // *................................... Constantes ..................................
-const drawerW = 240
+const drawerW = 260
 
 // *.................................... Estilos ....................................
 const useStyles = makeStyles((theme) => ({
