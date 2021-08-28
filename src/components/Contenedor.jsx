@@ -11,7 +11,7 @@ const estilos = makeStyles((theme) => ({
   content: {
     flexGrow: 1,
     // backgroundColor: theme.palette.background.default,
-    backgroundColor: 'red',
+    backgroundColor: '#fff',
     minHeight: '100vh',
     overflowY: 'auto',
     overflowX: 'hidden',

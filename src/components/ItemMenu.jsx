@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 // ! ........................... PRINCIPAL .................................
-const ItemMenu = ({ icon, text, path, changeState, estate }) => {
+const ItemMenu = ({ id, icon, text, path, changeState, estate }) => {
   //
   const classes = useStyles()
   const history = useHistory()
@@ -32,12 +32,12 @@ const ItemMenu = ({ icon, text, path, changeState, estate }) => {
   return (
     <>
       {path ? (
-        <ListItem button onClick={(e) => goTo(e, path)}>
+        <ListItem button id={id} onClick={(e) => goTo(e, path)}>
           <ListItemIcon>{icon}</ListItemIcon>
           <ListItemText primary={text} />
         </ListItem>
       ) : (
-        <ListItem button onClick={(e) => change(e)} className={classes.nested}>
+        <ListItem button id={id} onClick={(e) => change(e)} className={classes.nested}>
           <ListItemIcon>{icon}</ListItemIcon>
           <ListItemText primary={text} />
           {estate ? <ExpandLess /> : <ExpandMore />}

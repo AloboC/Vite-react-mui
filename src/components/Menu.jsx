@@ -14,8 +14,11 @@ const useStyles = makeStyles((theme) => ({
   },
   drawerPaper: {
     // cubre todo el alto de la pantalla
-    width: drawerW
+    width: drawerW,
+    // backgroundColor: '#eee'
+    backgroundColor: 'red'
   },
+
   offset: theme.mixins.toolbar
 }))
 // !..................................... Menu ........................................
@@ -30,7 +33,9 @@ const Menu = ({ variant, open, onClose }) => {
       open={open}
       onClose={onClose ?? null}
     >
-      <div className={classes.offset}></div>
+      <div className={classes.offset}>
+        <img src="" alt="Logo" />
+      </div>
       <Divider />
       <Lista />
     </Drawer>
